@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Contact.css";
 
+
 const ContactUs = () => {
   const [formVisible, setFormVisible] = useState(false);
   const [helpChatVisible, setHelpChatVisible] = useState(false);  // For the chatbox
@@ -68,6 +69,8 @@ const ContactUs = () => {
       } else {
         const errorData = await response.json();
         alert(`Error submitting form: ${errorData.error || 'Unknown error'}`);
+       
+
       }
     } catch (error) {
       console.error("Error:", error);
