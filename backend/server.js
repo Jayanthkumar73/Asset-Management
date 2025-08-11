@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors({
-  origin: "http://localhost:5173", // Your React frontend origin
+  origin: "https://asset-management-ryuv-2gqaip7t4.vercel.app/", // Your React frontend origin
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
