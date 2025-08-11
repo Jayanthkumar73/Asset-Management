@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutUs.css';
-import SahithyaImage from '../assets/Sahithya.jpg';
+import SahithyaImage from '../assets/sahithya.jpg';
 import raviimage from '../assets/ravi1.jpg';
 import pardhiv from '../assets/aakash.jpg'; 
 import jayanth from '../assets/jayanth.jpg';
