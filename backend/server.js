@@ -23,7 +23,7 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
-import cors from "cors";
+
 
 const allowedOrigins = [
   "http://localhost:5173", // Dev
