@@ -23,9 +23,21 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
+import cors from "cors";
+
+const allowedOrigins = [
+  "http://localhost:5173", // Dev
+  "https://asset-management-ryuv-p9dbxjig2.vercel.app/" // Live site
+];
+
 app.use(cors({
-  origin: "https://asset-management-ryuv-2gqaip7t4.vercel.app/", // Your React frontend origin
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }));
 
