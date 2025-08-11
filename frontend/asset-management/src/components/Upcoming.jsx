@@ -15,7 +15,7 @@ const UpcomingAssets = () => {
 
   const fetchAssets = async () => {
     try {
-      const response = await fetch("http://localhost:5000/upcomingassets");
+      const response = await fetch("https://asset-management-2-60qv.onrender.com/upcomingassets");
       if (!response.ok) throw new Error("Failed to fetch assets");
       const data = await response.json();
       setUpcomingAssets(data);
@@ -34,7 +34,7 @@ const UpcomingAssets = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/upcomingassets", {
+      const response = await fetch("https://asset-management-2-60qv.onrender.com/upcomingassets", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -60,7 +60,7 @@ const UpcomingAssets = () => {
   const handleMoveToWarehouse = async (asset) => {
     try {
       // Ensure we pass _id to the backend
-      const response = await fetch("http://localhost:5000/warehouse", {
+      const response = await fetch("https://asset-management-2-60qv.onrender.com/https://asset-management-2-60qv.onrender.com/warehouse", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...asset, _id: asset._id }),
@@ -69,7 +69,7 @@ const UpcomingAssets = () => {
       if (!response.ok) throw new Error("Failed to move asset");
   
       // Optional: Delete asset from upcoming (can skip if backend already does it)
-      await fetch(`http://localhost:5000/upcomingassets/${asset._id}`, {
+      await fetch(`https://asset-management-2-60qv.onrender.com/https://asset-management-2-60qv.onrender.com/upcomingassets/${asset._id}`, {
         method: "DELETE",
       });
   

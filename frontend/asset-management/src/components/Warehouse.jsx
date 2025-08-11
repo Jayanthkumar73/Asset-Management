@@ -7,7 +7,7 @@ const Warehouse = () => {
   const itemsPerPage = 5;
 
   useEffect(() => {
-    fetch("http://localhost:5000/warehouse") // API endpoint for warehouse items
+    fetch("https://asset-management-2-60qv.onrender.com/warehouse") // API endpoint for warehouse items
       .then((response) => response.json())
       .then((data) => setWarehouseItems(data))
       .catch((error) => console.error("Error fetching warehouse items:", error));

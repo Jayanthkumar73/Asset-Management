@@ -13,9 +13,9 @@ const Transactions = () => {
     const fetchData = async () => {
       try {
         const [assetsRes, dealersRes, upcomingRes] = await Promise.all([
-          fetch('http://localhost:5000/api/assets'),
-          fetch('http://localhost:5000/api/dealers'),
-          fetch('http://localhost:5000/upcomingassets'),
+          fetch('https://asset-management-2-60qv.onrender.com/api/assets'),
+          fetch('https://asset-management-2-60qv.onrender.com/api/dealers'),
+          fetch('https://asset-management-2-60qv.onrender.com/upcomingassets'),
         ]);
 
         // Check if all responses are OK

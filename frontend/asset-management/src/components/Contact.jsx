@@ -48,7 +48,7 @@ const ContactUs = () => {
   
     try {
       // Check if the server is running
-      const response = await fetch("http://localhost:5000/contacts", {
+      const response = await fetch("https://asset-management-2-60qv.onrender.com/contacts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
