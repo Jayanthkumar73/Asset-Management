@@ -1,17 +1,17 @@
 const nodemailer = require("nodemailer");
-
+require("dotenv").config();
 const createContact = async (name, email, address, helpRequest) => {
   try {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "raviprakashreddy_kontham@srmap.edu.in",
-        pass: "vmsmgszdzqmifgwx",
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS,
       },
     });
     
     const mailOptions = {
-      from: "raviprakashreddy_kontham@srmap.edu.in",
+      from: process.env.GMAIL_USER,
       to: email,
       subject: "regarding the order from srm university!",
       text: `Hello ${name},deliver to this address:"${address}",\n\nWe have received your message: "${helpRequest}"\n\nWe'll get back to you shortly.`,
