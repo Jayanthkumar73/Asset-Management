@@ -10,12 +10,12 @@ const Transactions = () => {
   const [chartDataReady, setChartDataReady] = useState(false);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = async () => {https://asset-management-1-0mj8.onrender.com/
       try {
         const [assetsRes, dealersRes, upcomingRes] = await Promise.all([
-          fetch('https://asset-management-2-60qv.onrender.com/api/assets'),
-          fetch('https://asset-management-2-60qv.onrender.com/api/dealers'),
-          fetch('https://asset-management-2-60qv.onrender.com/upcomingassets'),
+          fetch('https://asset-management-1-0mj8.onrender.com/api/assets'),
+          fetch('https://asset-management-1-0mj8.onrender.com/api/dealers'),
+          fetch('https://asset-management-1-0mj8.onrender.com/upcomingassets'),
         ]);
 
         // Check if all responses are OK

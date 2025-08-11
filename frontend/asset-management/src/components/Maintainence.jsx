@@ -26,7 +26,7 @@ const Maintenance = () => {
 
   useEffect(() => {
     if (view === "serviceSuggestion") {
-      fetch("https://asset-management-2-60qv.onrender.com/api/cssassetservice")
+      fetch("https://asset-management-1-0mj8.onrender.com/api/cssassetservice")
         .then((res) => res.json())
         .then((data) => {
           // Normalize the data to ensure consistent ID properties
@@ -43,7 +43,7 @@ const Maintenance = () => {
   }, [view]);
 
   useEffect(() => {
-    axios.get('https://asset-management-2-60qv.onrender.com/api/assetservice')
+    axios.get('https://asset-management-1-0mj8.onrender.com/api/assetservice')
       .then((res) => {
         console.log(res.data);
         // Normalize the data to ensure consistent ID properties
@@ -79,7 +79,7 @@ const Maintenance = () => {
       repairSentDate: newAsset.repairSentDate ? new Date(newAsset.repairSentDate).toISOString() : null,
     };
 
-    fetch("https://asset-management-2-60qv.onrender.com/api/assetservice/add", {
+    fetch("https://asset-management-1-0mj8.onrender.com/api/assetservice/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formattedAsset),
@@ -118,7 +118,7 @@ const Maintenance = () => {
     try {
       console.log("🗑️ Attempting to delete asset with assetModelId:", assetModelId);
   
-      const response = await fetch(`https://asset-management-2-60qv.onrender.com/api/assetservice/model/${assetModelId}`, {
+      const response = await fetch(`https://asset-management-1-0mj8.onrender.com/api/assetservice/model/${assetModelId}`, {
         method: "DELETE",
       });
   
@@ -178,7 +178,7 @@ const Maintenance = () => {
     }
 
     try {
-      const res = await fetch(`https://asset-management-2-60qv.onrender.com/api/assets/${currentAsset._id}`, {
+      const res = await fetch(`https://asset-management-1-0mj8.onrender.com/api/assets/${currentAsset._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

@@ -24,7 +24,7 @@ const Assets = () => {
   const fetchAddedAssets = async () => {
     setLoading(true);
     try {
-      const response = await fetch("https://asset-management-2-60qv.onrender.com/api/assets");
+      const response = await fetch("https://asset-management-1-0mj8.onrender.com/api/assets");
       if (!response.ok) {
         throw new Error(`Failed to fetch assets: ${response.status} ${response.statusText}`);
       }
@@ -53,7 +53,7 @@ const Assets = () => {
     }
   
     try {
-      const response = await fetch("https://asset-management-2-60qv.onrender.com/api/assets/add", {
+      const response = await fetch("https://asset-management-1-0mj8.onrender.com/api/assets/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

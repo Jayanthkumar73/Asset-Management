@@ -18,7 +18,7 @@ const Dealers = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch("https://asset-management-2-60qv.onrender.com/api/dealers");
+      const response = await fetch("https://asset-management-1-0mj8.onrender.com/api/dealers");
       if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
       const data = await response.json();
       setDealers(data);
@@ -48,7 +48,7 @@ const Dealers = () => {
     }
 
     try {
-      const res = await fetch("https://asset-management-2-60qv.onrender.com/api/dealers/add", {
+      const res = await fetch("https://asset-management-1-0mj8.onrender.com/api/dealers/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newDealer),

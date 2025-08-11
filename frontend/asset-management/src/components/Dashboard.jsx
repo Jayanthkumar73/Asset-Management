@@ -21,7 +21,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     // Fetch overview stats
-    fetch("https://asset-management-2-60qv.onrender.com/overview")
+    fetch("https://asset-management-1-0mj8.onrender.com/overview")
       .then((response) => response.json())
       .then((data) => {
         console.log("📊 Overview data:", data);
@@ -30,7 +30,7 @@ const Dashboard = () => {
       .catch((error) => console.error("❌ Error fetching overview:", error));
 
     // Fetch recent asset activity
-    fetch("https://asset-management-2-60qv.onrender.com/recentActivity")
+    fetch("https://asset-management-1-0mj8.onrender.com/recentActivity")
       .then((response) => response.json())
       .then((data) => {
         console.log("📝 Recent activity:", data);
