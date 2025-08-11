@@ -3,31 +3,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
-const assetRoutes = require("./routes/assets.js");
-const dealerRoutes = require("./routes/dealers.js");
-const assetServiceRoutes = require("./routes/assetservice.js");
-const combinedRoutes = require("./routes/Service.js");
-const wareRoutes = require("./routes/ware.js");
-//const assetRoutes = require("./routes/UpcomingAsset");
-// ✅ Correct import
-const upcomingRoutes = require("./routes/upcoming.js");
-const dashboardRoutes = require("./routes/dashboard");
-const contactRoutes = require("./routes/contact");
-
 
 const app = express();
-
-//app.use("/contact", contactRoutes);
-
-app.use(express.json());
-
-app.use(express.urlencoded({ extended: true }));
-
-
-
 const allowedOrigins = [
   "http://localhost:5173", // Dev
-  "https://asset-management-ryuv-p9dbxjig2.vercel.app/" // Live site
+  "https://asset-management-azure-two.vercel.app/" // Live site
 ];
 
 app.use(cors({
@@ -40,6 +20,30 @@ app.use(cors({
   },
   credentials: true
 }));
+
+const assetRoutes = require("./routes/assets.js");
+const dealerRoutes = require("./routes/dealers.js");
+const assetServiceRoutes = require("./routes/assetservice.js");
+const combinedRoutes = require("./routes/Service.js");
+const wareRoutes = require("./routes/ware.js");
+//const assetRoutes = require("./routes/UpcomingAsset");
+// ✅ Correct import
+const upcomingRoutes = require("./routes/upcoming.js");
+const dashboardRoutes = require("./routes/dashboard");
+const contactRoutes = require("./routes/contact");
+
+
+
+
+//app.use("/contact", contactRoutes);
+
+app.use(express.json());
+
+app.use(express.urlencoded({ extended: true }));
+
+
+
+
 
 // ✅ Register Routes
 app.use("/api/assets", assetRoutes);
