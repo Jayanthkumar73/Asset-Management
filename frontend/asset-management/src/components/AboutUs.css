@@ -1,69 +1,127 @@
-/* General container styling */
+/* Container styles */
 .aboutus-container {
-    padding: 20px;
-    font-family: Arial, sans-serif;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(60, 60, 120, 0.12);
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+/* Info section */
+.aboutus-info h1 {
+  font-size: 2.5rem;
+  color: #2d3a4a;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.aboutus-info h2 {
+  font-size: 1.5rem;
+  color: #3e4e63;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.aboutus-info p {
+  color: #444;
+  font-size: 1.08rem;
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.aboutus-info ul {
+  margin-left: 24px;
+  margin-bottom: 18px;
+}
+
+.aboutus-info li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Developer section */
+.developer-section {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.developer-section h2 {
+  color: #2d3a4a;
+  font-size: 1.7rem;
+  margin-bottom: 28px;
+  font-weight: 700;
+}
+
+.developer-profiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.developer-card {
+  background: #f7f9fc;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(60, 60, 120, 0.10);
+  padding: 24px 18px 18px 18px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.developer-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(60, 60, 120, 0.18);
+}
+
+.developer-image {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #4b6cb7;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(60, 60, 120, 0.10);
+}
+
+.developer-card h3 {
+  font-size: 1.15rem;
+  color: #2d3a4a;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .aboutus-container {
+    padding: 18px;
   }
-  
-  /* About us information section */
-  .aboutus-info {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .aboutus-info h1 {
-    margin-bottom: 10px;
-  }
-  
-  .aboutus-info p {
-    line-height: 1.6;
-  }
-  
-  .aboutus-info ul {
-    list-style: disc;
-    padding-left: 20px;
-  }
-  
-  /* Developer profiles section */
-  .developer-section {
-    text-align: center;
-  }
-  
-  .developer-section h2 {
-    margin-bottom: 20px;
-  }
-  
   .developer-profiles {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 18px;
   }
-  
   .developer-card {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 220px;
-    text-align: center;
+    width: 180px;
+    padding: 16px 10px 12px 10px;
   }
-  
-  .developer-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .aboutus-container {
+    padding: 8px;
   }
-  
-  .developer-card h3 {
-    margin: 10px 0 5px;
-    font-size: 18px;
+  .developer-profiles {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
   }
-  
-  .developer-card p {
-    color: #666;
+  .developer-card {
+    width: 90vw;
+    max-width: 320px;
   }
-  
+}

@@ -1,13 +1,30 @@
 import React from 'react';
 import './AboutUs.css';
-import SahithyaImage from '../assets/sahithya.jpg';
+import YashImage from '../assets/yaswanth_image.jpg';
 import raviimage from '../assets/ravi1.jpg';
-import pardhiv from '../assets/aakash.jpg'; 
+import SplitText from "./SplitText";
+
+const handleAnimationComplete = () => {
+  console.log('All letters have animated!');
+};
 import jayanth from '../assets/jayanth.jpg';
 const Aboutus = () => (
   <div className="aboutus-container">
     <div className="aboutus-info">
-      <h1>About Us</h1>
+      <h1><SplitText
+  text="ABOUT US!"
+  className="text-2xl font-semibold text-center"
+  delay={100}
+  duration={0.6}
+  ease="power3.out"
+  splitType="chars"
+  from={{ opacity: 0, y: 40 }}
+  to={{ opacity: 1, y: 0 }}
+  threshold={0.1}
+  rootMargin="-100px"
+  textAlign="center"
+  onLetterAnimationComplete={handleAnimationComplete}
+/></h1>
       <p>
         Welcome to our Asset Management System – a powerful web-based solution designed to simplify and streamline the process of tracking and managing organizational assets. 
         We are a team of passionate developers committed to solving real-world operational challenges through technology. Our project combines the power of modern web development 
@@ -69,10 +86,8 @@ const Aboutus = () => (
             className="developer-image"
           />
           <h3>Jayanth</h3>
-          <p>Frontend Developer</p>
-          <p>
-            Jayanth is responsible for developing the intuitive user interface using React.js. He ensures that the system is easy to navigate and offers a seamless experience.
-          </p>
+         
+          
         </div>
 
         <div className="developer-card">
@@ -82,37 +97,22 @@ const Aboutus = () => (
             className="developer-image"
           />
           <h3>Ravi reddy</h3>
-          <p>Backend Developer</p>
-          <p>
-            Ravi reddy manages the backend infrastructure of the system using Node.js and Express. He also handles the database management in MongoDB to ensure smooth data storage and retrieval.
-          </p>
+          
+          
         </div>
 
         <div className="developer-card">
           <img
-            src={SahithyaImage}
+            src={YashImage}
             alt="Developer 3"
             className="developer-image"
           />
-          <h3>Sahithya</h3>
-          <p>DevOps Engineer</p>
-          <p>
-            Sahithya is responsible For API testing and ensuring robust communication between the frontend and backend..
-          </p>
+          <h3>Yaswanth Sai Mannem</h3>
+        
+          
         </div>
 
-        <div className="developer-card">
-          <img
-            src={pardhiv}
-            alt="Developer 4"
-            className="developer-image"
-          />
-          <h3>Aakash</h3>
-          <p>UI/UX Designer</p>
-          <p>
-            Aakash designs the user interfaces with a focus on providing an intuitive and attractive experience. He ensures the system is accessible and user-friendly.
-          </p>
-        </div>
+        
       </div>
     </div>
   </div>
