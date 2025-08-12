@@ -17,15 +17,7 @@ app.use(cors({
       callback(null, true);
     
     }
-    // Allow localhost for development
-  if (origin.startsWith('http://localhost')) {
-    return callback(null, true);
-  }
 
-  // Allow your main Vercel production URL AND all preview URLs
-  if (origin.endsWith('.vercel.app')) {
-    return callback(null, true);
-  } 
     else {
       callback(new Error("Not allowed by CORS"));
     }
