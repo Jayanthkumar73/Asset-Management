@@ -7,14 +7,26 @@ const cors = require("cors");
 const app = express();
 const allowedOrigins = [
   "http://localhost:5173", // Dev
-  "https://asset-management-azure-two.vercel.app/" // Live site
+  "https://asset-management-azure-two.vercel.app/" ,
+  "https://asset-management-1-0mj8.onrender.com/ "// Live site
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
-    } else {
+    
+    }
+    // Allow localhost for development
+  if (origin.startsWith('http://localhost')) {
+    return callback(null, true);
+  }
+
+  // Allow your main Vercel production URL AND all preview URLs
+  if (origin.endsWith('.vercel.app')) {
+    return callback(null, true);
+  } 
+    else {
       callback(new Error("Not allowed by CORS"));
     }
   },
