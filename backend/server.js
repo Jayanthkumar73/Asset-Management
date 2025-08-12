@@ -7,8 +7,8 @@ const cors = require("cors");
 const app = express();
 const allowedOrigins = [
   "http://localhost:5173", // Dev
-  "https://asset-management-azure-two.vercel.app/" ,
-  "https://asset-management-1-0mj8.onrender.com/ "// Live site
+  "https://asset-management-azure-two.vercel.app" ,//https://asset-management-azure-two.vercel.app/
+  "https://asset-management-1-0mj8.onrender.com"// Live site
 ];
 
 app.use(cors({
